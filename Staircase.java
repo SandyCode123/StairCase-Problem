@@ -20,14 +20,16 @@ public class Staircase {
 			if (mid > 0 && (mid * (mid + 1)) > T && 
 						(mid * (mid - 1)) <= T) 
 				return mid - 1; 
-
-            if (mid > 0 && (mid * (mid + 1)) < T)
-            {
-                if(((mid+1) * (mid + 2)) > T)
-				    return mid; 
-				else if(((mid+1) * (mid + 2)) == T)
-				    return mid+1;
-            }
+			
+			// if our solution to equation 
+				// lies between mid and mid+1 
+			if (mid > 0 && (mid * (mid + 1)) < T)
+			{
+				 if(((mid+1) * (mid + 2)) > T)
+					    return mid; 
+				 else if(((mid+1) * (mid + 2)) == T)
+					    return mid+1;
+			}
             
 			// if solution to equation is 
 			// greater than mid 
